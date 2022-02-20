@@ -1,0 +1,10 @@
+config SHIELD_SCUFFDOX90_PAD
+    def bool $(shields_list_contains,SCUFFDOX90_PAD)
+config SHIELD_SCUFFDOX90_LEFT
+    def bool $(shields_list_contains,SCUFFDOX90_LEFT)
+config SHIELD_SCUFFDOX90_RIGHT
+    def bool $(shields_list_contains,SCUFFDOX90_RIGHT)
+config SHIELD_SCUFFDOX90_LEFTSINGLE
+    def bool $(shields_list_contains,SCUFFDOX90_LEFTSINGLE)
+config SHIELD_SCUFFDOX90_RIGHTSINGLE
+    def bool $(shields_list_contains,SCUFFDOX90_RIGHTSINGLE)

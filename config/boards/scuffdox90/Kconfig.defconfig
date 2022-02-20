@@ -1,0 +1,44 @@
+config ZMK_SPLIT_BLE
+    default y
+
+config ZMK_USB
+    default y
+
+if SHIELD_SCUFFDOX90_PAD
+
+config ZMK_KEYBOARD_NAME
+    default "Scuffdox90"
+
+endif
+
+if SHIELD_SCUFFDOX90_LEFT || SHIELD_SCUFFDOX90_LEFTSINGLE
+
+config ZMK_KEYBOARD_NAME
+    default "ScuffDox Left"
+        
+endif
+
+if SHIELD_SCUFFDOX90_RIGHT || SHIELD_SCUFFDOX90_RIGHTSINGLE
+
+config ZMK_KEYBOARD_NAME
+    default "ScuffDox Right"
+        
+endif
+
+
+if SHIELD_SCUFFDOX90_PAD || SHIELD_SCUFFDOX90_LEFT || SHIELD_SCUFFDOX90_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+    default y
+
+endif
+
+if !SHIELD_SCUFFDOX90_PAD
+
+config ZMK_BATTERY_VOLTAGE_DIVIDER
+	default y
+
+endif

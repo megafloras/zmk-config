@@ -1,0 +1,28 @@
+#include "scuffproto_scuffdox90.dtsi"
+
+&default_transform {
+	col-offset = <7>;
+};
+
+/ {
+	kscan0: kscan {
+		compatible = "zmk,kscan-gpio-matrix";
+		label = "KSCAN";
+		diode-direction = "row2col";
+
+		col-gpios
+			= <&scuffdox90_a 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&scuffdox90_a 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&scuffdox90_a 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&scuffdox90_a 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			;
+		row-gpios
+			= <&scuffdox90_a 4 GPIO_ACTIVE_HIGH>
+			, <&scuffdox90_a 5 GPIO_ACTIVE_HIGH>
+			, <&scuffdox90_a 6 GPIO_ACTIVE_HIGH>
+			, <&scuffdox90_a 7 GPIO_ACTIVE_HIGH>
+			, <&scuffdox90_a 8 GPIO_ACTIVE_HIGH>
+			, <&scuffdox90_a 9 GPIO_ACTIVE_HIGH>
+			;
+	};
+};

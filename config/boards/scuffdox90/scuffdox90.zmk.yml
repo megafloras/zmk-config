@@ -1,0 +1,12 @@
+file_format: "1"
+id: scuffdox90
+name: ScuffDox
+type: shield
+url: https://github.com/megafloras/zmk-config/tree/master/config/boards/shields/scuffdox90
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - scuffdox_pad
+  - scuffdox_left
+  - scuffdox_right
