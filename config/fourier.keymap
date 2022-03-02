@@ -11,14 +11,15 @@
 
 / {
     behaviors {
-        rbkspc: rightbracket_backspace {
+        gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";
-            label = "RIGHTBRACKET_BACKSPACE";
+            label = "GRAVE_ESCAPE";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp RBKT>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
         };
     };
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -32,7 +33,7 @@
 
         default_layer {
             bindings = <
-    &kp ESC   &kp Q    &kp W    &kp E     &kp R     &kp T   /**/ &kp Y       &kp U  &kp I     &kp O     &kp P     &kp LBKT  &kp rbkspc
+    &kp ESC   &kp Q    &kp W    &kp E     &kp R     &kp T   /**/ &kp Y       &kp U  &kp I     &kp O     &kp P     &kp LBKT  &kp BACKSPACE
     &kp TAB   &kp A    &kp S    &kp D     &kp F     &kp G   /**/ &kp H       &kp J  &kp K     &kp L     &kp SEMI   &kp SQT
     &kp LSHFT &kp Z    &kp X    &kp C     &kp V     &kp B   /**/ &kp N       &kp M  &kp COMMA &kp DOT   &kp FSLH  &mt RSHFT ENTER
     &kp LCTRL &kp LALT &kp LGUI &kp F1     &lt 2 SPACE         /**/ &lt 1 SPACE        &lt 2 BACKSPACE     &kp RGUI  &kp RALT  &kp RCTRL
