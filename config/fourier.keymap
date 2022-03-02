@@ -13,7 +13,7 @@
     behaviors {
         rbkspc: rightbracket_backspace {
             compatible = "zmk,behavior-mod-morph";
-            label = "GRAVE_ESCAPE";
+            label = "RIGHTBRACKET_BACKSPACE";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp RBKT>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
