@@ -11,11 +11,11 @@
 
 / {
     behaviors {
-        gresc: grave_escape {
+        rbks: rbkt_back {
             compatible = "zmk,behavior-mod-morph";
-            label = "GRAVE_ESCAPE";
+            label = "RBKT_BACK";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp GRAVE>;
+            bindings = <&kp RBKT>, <&kp BKSP>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
         };
     };
@@ -33,7 +33,7 @@
 
         default_layer {
             bindings = <
-    &kp ESC   &kp Q    &kp W    &kp E     &kp R     &kp T   /**/ &kp Y       &kp U  &kp I     &kp O     &kp P     &kp LBKT  &kp BACKSPACE
+    &kp ESC   &kp Q    &kp W    &kp E     &kp R     &kp T   /**/ &kp Y       &kp U  &kp I     &kp O     &kp P     &kp LBKT  &rbks
     &kp TAB   &kp A    &kp S    &kp D     &kp F     &kp G   /**/ &kp H       &kp J  &kp K     &kp L     &kp SEMI   &kp SQT
     &kp LSHFT &kp Z    &kp X    &kp C     &kp V     &kp B   /**/ &kp N       &kp M  &kp COMMA &kp DOT   &kp FSLH  &mt RSHFT ENTER
     &kp LCTRL &kp LALT &kp LGUI &kp F1     &lt 2 SPACE         /**/ &lt 1 SPACE        &lt 2 BACKSPACE     &kp RGUI  &kp RALT  &kp RCTRL
