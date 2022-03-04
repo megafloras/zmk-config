@@ -16,7 +16,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;    // <---[[moderate duration]]
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -26,7 +26,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "NUM_HOLD_TAP";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;    // <---[[slightly higher than moderate duration]]
+            tapping-term-ms = <275>;    // <---[[slightly higher than moderate duration]]
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -46,10 +46,10 @@
 
         default_layer {
             bindings = <
-    &kp ESC   &nht N1 Q &nht N2 W    &nht N3 E  &nht N4 R &nht N5 T   /**/ &nht N6 Y       &nht N7 U  &nht N8 I     &nht N9 O     &nht N0 P     &nht MINUS LBKT  &bht RBKT BKSP
-    &kp TAB   &kp A     &kp S        &kp D      &kp F     &kp G   /**/ &kp H       &kp J  &kp K     &kp L     &kp SEMI  &bht ENTER SQT
-    &kp LSHFT &kp Z     &kp X        &kp C      &kp V     &kp B   /**/ &kp N       &kp M  &kp COMMA &kp DOT   &kp FSLH  &mt RSHFT ENTER
-    &kp LCTRL &kp LALT  &kp LGUI     &kp F1     &lt 2 SPACE      /**/ &lt 1 SPACE        &lt 2 BKSP     &kp RGUI  &kp RALT  &kp RCTRL
+    &kp ESC   &nht N1 Q &nht N2 W    &nht N3 E  &nht N4 R &nht N5 T   /**/ &nht N6 Y   &nht N7 U  &nht N8 I     &nht N9 O     &nht N0 P     &nht MINUS LBKT  &bht RBKT BKSP
+    &kp TAB   &kp A     &kp S        &kp D      &kp F     &kp G       /**/ &kp H       &kp J      &kp K         &kp L         &kp SEMI  &bht ENTER SQT
+    &kp LSHFT &kp Z     &kp X        &kp C      &kp V     &kp B       /**/ &kp N       &kp M      &kp COMMA     &kp DOT       &kp FSLH  &mt RSHFT ENTER
+    &kp LCTRL &kp LALT  &kp LGUI     &kp F1     &lt 2 SPACE           /**/ &lt 1 SPACE        &lt 2 LEFT     &mt RGUI DOWN  &mt RALT UP &mt RCTRL RIGHT
             >;
         };
 
