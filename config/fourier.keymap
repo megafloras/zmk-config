@@ -10,6 +10,11 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define default_layer 0
+#define num_layer   1
+#define symb_layer   2
+#define fn_layer   2
+
 / {
     behaviors {
 
@@ -47,10 +52,10 @@
 
         default_layer {
             bindings = <
-    &nht GRAVE ESC   &kp Q     &kp W        &kp E      &kp R     &kp T       /**/ &kp Y       &kp U      &kp I          &kp O         &kp P     &kp LBKT      &kp RBKT
+    &nht GRAVE ESC   &kp Q     &kp W        &kp E      &kp R     &kp T       /**/ &kp Y       &kp U      &kp I          &kp O         &kp P     &bht RBKT LBKT  &kp BkSP
     &kp TAB          &kp A     &kp S        &kp D      &kp F     &kp G       /**/ &kp H       &kp J      &kp K          &kp L         &kp SEMI  &nht ENTER SQT
     &kp LSHFT        &kp Z     &kp X        &kp C      &kp V     &kp B       /**/ &kp N       &kp M      &kp COMMA      &kp DOT       &kp FSLH  &mt RSHFT ENTER
-    &kp LCTRL        &kp LALT  &kp LGUI     &none      &lt 2 BKSP           /**/  &lt 1 SPACE &none      &mt RGUI DOWN  &mt RALT UP   &mt RCTRL RIGHT
+    &kp LCTRL        &kp LALT  &kp LGUI     &none      &lt 2 SPACE           /**/ &lt 1 SPACE &none      &mt RGUI DOWN  &mt RALT UP   &mt RCTRL RIGHT
             >;
         };
 
@@ -61,12 +66,12 @@
 // | trans   | trans| trans |           |             |   (being held)   | trans | trans | trans|trans|
 // -------------------------------------------        -----------------------------------------------
 
-        symbols_layer {
+        num_layer {
             bindings = <
-    &kp GRAVE     &kp N1    &kp N2    &kp N3     &kp N4     &kp N5         /**/ &kp N6    &kp N7      &kp N8      &kp N9       &kp N0     &kp MINUS  &kp EQUAL
-    &kp GRAVE  &none    &none    &none     &none     &none              /**/ &none     &kp LBKT    &kp RBKT    &none        &kp SQT    &kp BSLH
-    &trans     &out OUT_TOG    &none    &none     &none     &kp C_VOL_DN       /**/ &none     &none       &none       &none        &none      &trans
-    &trans     &trans   &trans   &none     &trans                       /**/ &trans                &trans    &trans         &trans     &trans
+    &kp GRAVE     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5   /**/ &kp N6     &kp N7      &kp N8      &kp N9       &kp N0     &kp MINUS  &kp EQUAL
+    &kp GRAVE  &kp F1    &kp F2    &kp F3     &kp F4     &kp F5   /**/ &kp F6     &kp LBKT    &kp RBKT    &none        &kp SQT    &kp BSLH
+    &trans     &kp F7    &kp F8    &kp F9     &kp F10    &kp F11  /**/ &kp F12    &none       &none       &none        &none      &trans
+    &trans     &trans    &trans    &none      &sl adjust_layer              /**/ &trans                 &trans      &trans       &trans     &trans
             >;
         };
 
@@ -77,13 +82,22 @@
 // | trans   | trans| trans |   (being held)     |       |                  | trans | trans | BT #4  |
 // -------------------------------------------        -----------------------------------------------
 
-        fn_layer {
+        symb_layer {
             bindings = <
-    &kp F1        &kp F2          &kp F3          &kp F4           &kp F5       &kp F6    /**/ &kp F7     &kp F8     &kp F9    &kp F10   &kp F11    &kp F12  &kp DEL
+    &kp F1        &kp EXCL        &kp AT          &kp HASH       &kp DLLR  &kp PRCNT    /**/ &kp CART     &kp AMPS     &kp STAR    &kp LPAR   &kp RPAR    &kp EQUAL  &kp PLUS
+    &kp CAPS      &none           &kp END         &kp PG_DN      &kp PG_UP &kp HOME  /**/    &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT &kp SQT    &kp C_PP
+    &none  &none    &none    &none   &none     &none   /**/      &none      &none      &none     &none     &none      &none
+    &trans        &trans          &trans          &none            &trans                 /**/ &sl adjust_layer     &none      &trans    &trans    &bt BT_SEL 3
+            >;
+        };
+
+        adjust_layer {
+            bindings = <
+    &trans        &trans          &trans          &trans           &trans       &trans    /**/ &trans     &trans     &trans    &trans  &trans    &trans  &trans
     &kp CAPS      &none           &kp END         &kp PG_DN        &kp PG_UP    &kp HOME  /**/ &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT &kp SQT    &kp C_PP
     &out OUT_TOG  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3 &none     /**/ &bt BT_NXT      &none      &none     &none     &none      &bt BT_CLR
     &trans        &trans          &trans          &none            &trans                 /**/ &trans     &none      &trans    &trans    &bt BT_SEL 3
             >;
-        };
+        }
     };
 };
