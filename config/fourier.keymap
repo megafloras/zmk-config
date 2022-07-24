@@ -71,7 +71,7 @@
     &kp GRAVE     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5   /**/ &kp N6     &kp N7      &kp N8      &kp N9       &kp N0     &kp MINUS  &kp EQUAL
     &kp GRAVE  &kp F1    &kp F2    &kp F3     &kp F4     &kp F5   /**/ &kp F6     &kp LBKT    &kp RBKT    &none        &kp SQT    &kp BSLH
     &trans     &kp F7    &kp F8    &kp F9     &kp F10    &kp F11  /**/ &kp F12    &none       &none       &none        &none      &trans
-    &trans     &trans    &trans    &none      &sl adjust_layer              /**/ &trans                 &trans      &trans       &trans     &trans
+    &trans     &trans    &trans    &none      &sl 3              /**/ &trans                 &trans      &trans       &trans     &trans
             >;
         };
 
@@ -87,7 +87,7 @@
     &kp F1        &kp EXCL        &kp AT          &kp HASH       &kp DLLR  &kp PRCNT    /**/ &kp CART     &kp AMPS     &kp STAR    &kp LPAR   &kp RPAR    &kp EQUAL  &kp PLUS
     &kp CAPS      &none           &kp END         &kp PG_DN      &kp PG_UP &kp HOME  /**/    &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT &kp SQT    &kp C_PP
     &none  &none    &none    &none   &none     &none   /**/      &none      &none      &none     &none     &none      &none
-    &trans        &trans          &trans          &none            &trans                 /**/ &sl adjust_layer     &none      &trans    &trans    &bt BT_SEL 3
+    &trans        &trans          &trans          &none            &trans                 /**/ &sl 3     &none      &trans    &trans    &bt BT_SEL 3
             >;
         };
 
