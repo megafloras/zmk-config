@@ -10,11 +10,6 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define default_layer 0
-#define num_layer   1
-#define symb_layer   2
-#define fn_layer   2
-
 / {
     behaviors {
 
